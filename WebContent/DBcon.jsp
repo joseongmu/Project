@@ -5,7 +5,7 @@
 
 <%
 String drivers="com.mysql.jdbc.Driver";
-String url="jdbc:mysql://localhost:3306/gowith";
+String url="jdbc:mysql://localhost:3306/gowith?useUnicode=true&characterEncoding=UTF-8";
 String db_user="root";
 String db_passwd="1q2w3e4r!";
 
@@ -16,14 +16,12 @@ try{
 }
 
 Connection Conn=null; //DB연결 정보 담는 Conn 선언
-Statement stmt=null;  //DB연결 통로를 역활을 하는 stmt 선언
+PreparedStatement pstmt=null;  //DB연결 통로를 역활을 하는 pstmt 선언
 ResultSet rs=null;        //쿼리문 실행 결과 값을 담을 rs 선언
+Statement stmt=null;
 
-try{
-		Conn=DriverManager.getConnection(url,db_user,db_passwd);
-		stmt = Conn.createStatement();	
-}catch(Exception e){
-	e.printStackTrace();
-}
+Connection Conn2=null; //DB연결 정보 담는 Conn 선언
+PreparedStatement pstmt2=null;  //DB연결 통로를 역활을 하는 pstmt 선언
+ResultSet rs2=null;        //쿼리문 실행 결과 값을 담을 rs 선언
 %>
     

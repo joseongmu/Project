@@ -7,9 +7,6 @@
 	<%@include file="cssCon.jsp" %>
 	
 </head>
-<body class="homepage" id="top">
-<jsp:include page="Mainview/top/top.jsp"></jsp:include>
-<jsp:include page="Mainview/main/main.jsp"></jsp:include>
-<jsp:include page="Mainview/footer/footer.jsp"></jsp:include>
-</body>
+<jsp:include page="Mainview/top/top.jsp"></jsp:include><br><br>
+<jsp:include page="Mainview/search/main.jsp"></jsp:include>
 </html>
