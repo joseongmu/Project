@@ -17,12 +17,13 @@ int num_people =0;
 int duration =0;
 String meetingpoint =null;
 int meetingtime =0;
-
+String[] areas = {"서울","경기도","강원도","충청도","경상도","전라도","제주도","수신거부"};
+String[] check = {"","","","","","","",""};
 String img1 = null;
 String price = null;
 String userid = null;
 String SESSION_USER_ID=null;
-
+String errorMsg=null;
 String nextpage=null;
 String view=null;
 	String activeClass=null;

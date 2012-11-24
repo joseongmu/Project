@@ -4,7 +4,6 @@
 <%@include file="../../CommonT.jsp" %>
 
 <%
-	String errorMsg = "";
 
 	String email_address = "";
 	String nickname = "";
@@ -12,7 +11,7 @@
 	String introduce = "";
 	try{
 		Conn = DriverManager.getConnection(url,db_user,db_passwd);
-		pstmt = Conn.prepareStatement("SELECT * From user WHERE user_id=?");
+		pstmt = Conn.prepareStatement("SELECT * From user WHERE Id=?");
 		pstmt.setInt(1, 1);
 		rs = pstmt.executeQuery();
 		if(rs.next()){
@@ -30,79 +29,72 @@
 		if(Conn != null) try{Conn.close();}catch(SQLException e){}
 	}
 %>
-
-<div class="span11">
-		<div class="content-box list-view">
-		 <div class="general-form inlineForm">
-          <div class="avatar-box">
-            <div id="avatar-container">
-	 			<div class="box-header">
-						<h4>Your bookings > <a>Upcoming events</a>  </h4>
-				</div>
-				<form method="post" action="Update.jsp">
-		    	<div id=profile_wrap>
-				    <div id=profile_image>
-				  			<img src="profile_img" alt="" id="PreviewImage"  value="<%=profile_img%>">
-				  		</div>
-		    		
-		    		<div id=profile_file>
-				    	<div>컴퓨터에 저장된 이미지를 선택하세요.<br>사진의 최대 크기는 2MB입니다.(파일형식: JPG, GIF, PNG)</div>
-					   		<input name="profile_img" id="ImageFileUpload" onchange="readURL(this);" type="file">
-				  		</div>
-			   		
-				    <div id=profile_email>
-						<div>E-mail</div>
-				    	<input type="text" name="email_address" value="<%=email_address%>">
-				 		</div>
-				    		
-			   		<div id=profile_nickname>
-		    			<div>닉 네임</div>
-		    				<input type="text" name="nickname" value="<%=nickname%>">
-				    	</div>
-				    		
-				    	<div id=profile_old_password>
-				    		<div>현재 비밀번호</div>
-				    		<input type="password" name="old_password">
-				    	</div>
-				    		
-				    	<div id=profile_new_password>
-				    		<div>신규 비밀번호</div>
-				    		<input type="password" name="new_password">
-				    	</div>
-				    		
-				    	<div id=profile_check_password>
-				    		<div>신규 비밀번호 확인</div>
-				    		<input type="password" name="check_password">
-				    	</div>
-				    		
-				    	<div id=profile_introduce>
-				    		<div>소개 글</div>
-				    		<textarea name="introduce"><%=introduce%></textarea>
-				    	</div>
-				    		
-				    	<div id=profile_submit>
-				    		<input type="submit" name="profile_submit" value="회원 정보 수정">
-				    	</div>
-				    	</div>
-				    </form>
-				    </div>
-				    </div>
-				    </div>
-	 		 </div>
+<div class="span7 offset1">
+	<div>
+		<div class="general-form inlineForm">
+			<div class="avatar-box">
+        <form action="Menu/DashBoard/Update2.jsp" class="uniForm profile-form" method="POST">
+        <div id="avatar-container">
+					<div class="profile-avatar">
+						<img src="<%=profile_img %>" alt="xxxxx" width="200" height="200" class="avatar-display"  id="PreviewImage"/>
+					</div>
+					<h4>이미지를 선택 해주세요</h4>
+					<input type="file" name="profile_img" id="id_avatar" onchange="readURL(this);" />
+         <div class="clear"></div>
+			</div>
+        <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='nUiP6mI2mYvzhAZQekeBWP3yX4Idqscu' /></div>
+        <fieldset class="inlineLabels">
+          <div id="email_address" class="ctrlHolder error-indication"><label for="email_address">Email address</label>
+          	<div class="privacy_fieldset"><input type="text" name="email_address" value="<%=email_address%>" class="emailinput validateEmail validateCallback validate_email" id="email_address" class="inline-label-field " id="" /></div>
+						<span id="hint" class="formHint fineprint-text">Your email address will never be displayed publicly</span>
+            <div class="clear"></div>
+          </div>
+          
+				  <div id="nickname" class="ctrlHolder  ">
+	        	<label for="nickname">Nickname</label>
+	        	<div class="clear"></div>
+	      		<input type="text" name="nickname" id="nickname" class="textinput validateMaxLength val-60" maxlength="60" class="inline-label-field " value="<%=nickname%>" id="" />
+	      		<div class="clear"></div>
+  				</div>
+  				
+					<div id="password_current" class="ctrlHolder  ">
+	        	<label for="password_current">Current Password</label>
+	        	<div class="clear"></div>
+	      		<input type="text" name="password_current" class="textinput validateMaxLength val-30 validateCallback validate_username" id="password_current" class="inline-label-field "  id="" />
+	      		<div class="clear"></div>
+  				</div>
+  				
+					<div id="password_new" class="ctrlHolder  ">
+	        	<label for="password">password New</label>
+	        	<div class="clear"></div>
+	      		<input type="text" name="password_new" class="textinput validateMaxLength val-30 validateCallback validate_username" id="password_new" class="inline-label-field "  id="" />
+	      		<div class="clear"></div>
+  				</div>
+  				
+					<div id="password_confirm" class="ctrlHolder  ">
+	        	<label for="password">Password Confirm</label>
+	        	<div class="clear"></div>
+	      		<input type="text" name="password_confirm" class="textinput validateMaxLength val-30 validateCallback validate_username" id="password_confirm" class="inline-label-field "  id="" />
+	      		<div class="clear"></div>
+  				</div>
+  				
+  				<div id="introduce" class="ctrlHolder  ">
+	        	<label for="introduce"> Introduce</label>
+	        	<div class="clear"></div>
+	      		<textarea name="introduce" class="locationautocomplete validateMaxLength val-300" id="introduce" class="inline-label-field "  id="" ><%=introduce%></textarea>
+						<script type="text/javascript">
+							$(function(){
+							    gidsy.search_box_autocomplete($("#id_profile-location"), { autosubmit: false });
+							});
+						</script>
+						<div class="clear"></div>
+					</div>
+					<div class="button-bar standard-form-actions">
+            <button class="gidsy-button green-button" type="submit">Save Changes</button>
+          </div>
+				</fieldset>
+			</form>
+		</div>
 	</div>
-	
-	<script  type='text/javascript'>
-		$(function readURL(input) {
-		if (input.files && input.files[0]) {//Check if input has files.
-			var reader = new FileReader(); //Initialize FileReader.
-			reader.onload = function (e) {
-			$('#PreviewImage').attr('src', e.target.result);
-			$("#PreviewImage").resizable({ aspectRatio: true, maxHeight: 300 });
-			};
-			reader.readAsDataURL(input.files[0]);
-		} 
-		else {
-			$('#PreviewImage').attr('src', "#");
-			}
-		});
-</script>
+</div>
+</div>

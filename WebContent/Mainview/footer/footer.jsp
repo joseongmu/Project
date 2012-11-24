@@ -5,7 +5,7 @@
     </div>
     <div class="container_12">
       <div id="rb"></div>
-      <div class="grid_5 alpha omega footer_arrow">
+      <div class="grid_4 alpha omega footer_arrow">
         <span class="wand ready"></span>
         <h3><a href="/about/#host">Site Map</a></h3>
       </div>
@@ -17,6 +17,8 @@
           <li><span class="protect"></span>Search</li>
         </ul>
       </div>
-
+      <div class="grid_2 alpha">
+        <a href="footContent.jsp" class="more-button"><span></span>more</a>
+      </div>
     </div>
   </div>

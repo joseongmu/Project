@@ -28,7 +28,6 @@
       <div class="nav-collapse">
           <ul class="nav">
             <li class="active"><a href="#">Find someting to do
-           &nbsp;&nbsp;&nbsp;&nbsp;
             </a></li>
           </ul>
           <form class="navbar-search pull-left" action="">
@@ -100,6 +99,7 @@
         <p><i>Copyright © GoWith. All rights reserved.</i></p>
     </div>
 </div>
+
 <%
 	}
 }catch(Exception e){

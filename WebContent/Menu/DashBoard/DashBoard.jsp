@@ -52,7 +52,7 @@
                <jsp:include page="Organizing.jsp"></jsp:include>
               </div>
               <div class="tab-pane fade" id="Profile">
-              <jsp:include page="Profiletest.jsp"></jsp:include>
+              <jsp:include page="Profile.jsp"></jsp:include>
               </div>
               <div class="tab-pane fade" id="Account">
               <jsp:include page="Account.jsp"></jsp:include>
