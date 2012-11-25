@@ -1,1 +1,0 @@
-using git bash for project
