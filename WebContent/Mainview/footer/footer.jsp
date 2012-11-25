@@ -13,7 +13,7 @@
         <ul>
           <li><span class="deal"></span>Sign up</li>
           <li><span class="passion"></span>DashBoard</li>
-          <li><span class="simple"></span>Help center</li>
+          <li><span class="simple"></span><a href="helpCenter.jsp">Help center</a></li>
           <li><span class="protect"></span>Search</li>
         </ul>
       </div>
