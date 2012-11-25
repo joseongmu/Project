@@ -30,12 +30,14 @@
             <li class="active"><a href="#">Find someting to do
             </a></li>
           </ul>
-          <form class="navbar-search pull-left" action="">
-            <input type="text" class="search-query span2" placeholder="Search">
+          
+          <form class="navbar-search pull-left" action="SearchView.jsp" method="POST">
+            <input type="text" class="search-query span2" placeholder="Search"  name="location">
           </form>
           <ul class="nav pull-right">
           	<li class="divider-vertical"></li>
-            <li><a href="#"><i class="icon-search icon-white"></i></a></li>
+          	<!-- 추후 오류 수정 할 수 있도록 할것 -->
+            <li><a href="SearchView.jsp"><i class="icon-search icon-white"></i></a></li>
             <li class="divider-vertical"></li>
             <li><a href="<%out.println(DashBoardLink);%>"><i class="icon-star icon-white"></i></a></li>
             <li class="divider-vertical"></li>

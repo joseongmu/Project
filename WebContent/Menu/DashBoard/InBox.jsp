@@ -19,7 +19,7 @@ while(rs.next()) {
 	 	 title = rs.getString("title"); 
 	 	 String cratedat= rs.getString("cratedat"); 
      String nickname = rs.getString("nickname"); 
-     String profile_img = rs.getString("profile_img"); 
+     profile_img = rs.getString("profile_img"); 
 %>	
 	 	<div class="span3">
 	

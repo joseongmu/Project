@@ -9,6 +9,7 @@
 /*************************************/
 
 //Mainview/main.jsp에서 사용한 변수  content DB내용 가져올때 사용한 변수
+String location =null;
 String user_id = null;
 String title = null;
 String description=null;
@@ -19,6 +20,7 @@ String meetingpoint =null;
 int meetingtime =0;
 String[] areas = {"서울","경기도","강원도","충청도","경상도","전라도","제주도","수신거부"};
 String[] check = {"","","","","","","",""};
+String profile_img = null;
 String img1 = null;
 String price = null;
 String userid = null;
@@ -32,6 +34,7 @@ String view=null;
 	String  tabClass=null;
 	String  tabClass2=null;
 	String  tabClass3=null;
+	int title_num =0;
 //Mainview/top/top.jsp에서 Link 관련 목록
 String HomeLink="http://localhost:8080/gowith/index.jsp";
 String DashBoardLink="http://localhost:8080/gowith/DashBoardView.jsp";

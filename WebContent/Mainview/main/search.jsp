@@ -14,6 +14,7 @@
 				<input type="text" name="location" id="id_location">
 				  <button class="gidsy-button green-button left" loadingText="Search" id="search-submit">Search</button>
 				</form>
-			  </div>
-			    	<div class="clear"></div>
+			</div><div class="clear"></div>
+			
+			
 		</div> 

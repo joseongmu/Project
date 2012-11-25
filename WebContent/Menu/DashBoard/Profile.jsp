@@ -7,7 +7,6 @@
 
 	String email_address = "";
 	String nickname = "";
-	String profile_img = "";
 	String introduce = "";
 	try{
 		Conn = DriverManager.getConnection(url,db_user,db_passwd);
