@@ -886,5 +886,6 @@ i[class^="icon-"]{opacity:0.8;}
 .message-text{text-decoration: underline;}
 .del-button{float:right;position:relative; top:5px}
 .book_name{font-size:11pt;}
-
+.approval_img{width:140px; height: 100px; float:left;}
+.approval_avarta{width:60px; height: 60px; padding-right:5px; float:left;}
 
