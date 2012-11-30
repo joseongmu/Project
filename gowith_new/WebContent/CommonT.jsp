@@ -15,13 +15,17 @@ String query2=null;
 String HomeLink="http://localhost:8080/gowith/index.jsp";
 String SearchLink="http://localhost:8080/gowith/SearchView.jsp";
 String DashBoardLink="http://localhost:8080/gowith/DashBoardView.jsp";
-String MailingLink="#";
+
 String SignupLink="http://localhost:8080/gowith/SignUpView.jsp";
-String HelloLink="http://localhost:8080/gowith/top/Hello.jsp";
 String SignOutLink="http://localhost:8080/gowith/Login/LogOut.jsp";
 String HelpCenterLink="http://localhost:8080/gowith/Helpcenter.jsp";
 String FooterLink="http://localhost:8080/gowith/footerConstents.jsp";
+String TeamLink="http://localhost:8080/gowith/Team.jsp";
+String SearchContentLink="http://localhost:8080/gowith/SearchContentView.jsp";
+String CreateOrganLink="http://localhost:8080/gowith/Create_Organizing.jsp";
+String accountviewLink="http://localhost:8080/gowith/AccountView.jsp";
 //처리단.
+String MailingLink="http://localhost:8080/gowith/DashBoardView.jsp?view=inbox";
 String OrganizingLink="http://localhost:8080/gowith/DashBoardView.jsp?view=organ";
 String BookLink="http://localhost:8080/gowith/DashBoardView.jsp?view=book";
 String ProfileLink="http://localhost:8080/gowith/DashBoardView.jsp?view=pro";
@@ -59,10 +63,10 @@ String user_id = null;
 String title = null;
 String description=null;
 String category =null;
-int num_people =0;
-int duration =0;
+String num_people =null;
+String duration =null;
 String meetingpoint =null;
-int meetingtime =0;
+String meetingtime =null;
 
 //DashBoard/Booking.jsp 
  String cratedat=null;
@@ -71,7 +75,6 @@ String[] areas = {"서울","경기도","강원도","충청도","경상도","전�
 String[] check = {"","","","","","","",""};
 String errorMsg=null;
 
-String img1 = null;
 String price = null;
 String userid = null;
 String nextpage=null;
@@ -89,6 +92,24 @@ int Del_Id=0;
 String location =null;
 int title_num =0;
 
+
+String new_message = null;
+String reserve_id = null;
+
+String img1 = null;
+String img2 = null;
+String img3 = null;
+String img4 = null;
+String introduce = null;
+
+int recommand=0;
+String content_id=null;
+String book=null;
+
+String fileName1=null;
+String fileName2=null;
+String fileName3=null;
+String fileName4=null;
 
 
 

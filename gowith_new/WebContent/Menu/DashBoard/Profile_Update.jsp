@@ -7,6 +7,7 @@
 <%
 int Result =0;
 SESSION_USER_ID=	(String)session.getAttribute("SESSION_USER_ID");
+
 request.setCharacterEncoding("utf-8");
 
 try{
@@ -56,7 +57,7 @@ try{
 			pstmt.setString(6, SESSION_USER_ID);
 			Result = pstmt.executeUpdate();
 			%>
-			<script>location.href="<%=ProfileLink%>"; alert("정보수정이 완료되었습니다.");</script>
+			<script>location.href="<%=ProfileLink%>";</script>
 			<%
 	  }
  }catch(SQLException e){
@@ -97,3 +98,4 @@ try{
  	</div>
 </body>
 </html>
+

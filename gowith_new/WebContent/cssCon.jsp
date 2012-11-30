@@ -8,4 +8,3 @@
 	<script src="js/bootstrap.min.js"></script>
   <script   type="text/javascript" src="js/index.js" charset="utf-8"></script>
   <script   type="text/javascript" src="js/index2.js" charset="utf-8"></script>
-  <script   type="text/javascript" src="js/jquery-ui-1.8.2.js" charset="utf-8"></script>

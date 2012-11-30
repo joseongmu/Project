@@ -1,9 +1,39 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@include file="../../../CommonT.jsp" %>
+     <%@include file="../../../DBcon.jsp" %>
+ <% 
+content_id=request.getParameter("Id");
+try{
+	Conn = DriverManager.getConnection(url,db_user,db_passwd);
+	pstmt = Conn.prepareStatement("SELECT * FROM content WHERE Id=?");
+	pstmt.setString(1, content_id);
+	rs = pstmt.executeQuery();
+	if(rs.next()){
+		content_id= rs.getString("Id");
+		user_id= rs.getString("user_id");
+		title = rs.getString("title");
+		description= rs.getString("description");
+		meetingpoint = rs.getString("meetingpoint");
+		meetingtime = rs.getString("meetingtime");
+		category = rs.getString("category");
+		num_people = rs.getString("num_people");
+		duration = rs.getString("duration");
+		price = rs.getString("price");
+	}
+}catch (SQLException e){
+	errorMsg = e.getMessage();
+}finally{
+	if(rs !=null)try{rs.close();}catch(SQLException e){}
+	if(stmt !=null)try{stmt.close();}catch(SQLException e){}
+	if(pstmt !=null)try{pstmt.close();}catch(SQLException e){}
+	if(Conn !=null)try{Conn.close();}catch(SQLException e){}
+}
+
+%>
  <div class="span8">
     
-      <form class="form-horizontal-well"  action="Menu/DashBoard/Organizing/register.jsp" method="post">
+      <form class="form-horizontal-well"  action="Menu/DashBoard/Organizing/update.jsp" method="post">
         <fieldset> 
           <div class="control-group">
           	<label for="title" class="form_label_text">
@@ -12,7 +42,7 @@
             </label>
             
             <div class="controls">
-              <input type="text" class="input-xxlarge" id="title" name="title">
+              <input type="text" class="input-xxlarge" id="title" name="title" value="<%=title%>">
             </div>
           </div>
           
@@ -24,7 +54,7 @@
             </label>
             
             <div class="controls">
-              <textarea class="input-xxlarge" id="textarea" rows="8" name="description"></textarea>
+              <textarea class="input-xxlarge" id="textarea" rows="8" name="description"><%=description%></textarea>
             </div>
          </div>
          
@@ -87,7 +117,7 @@
 	              <span class="info-icon light tipsy-item"  title="홛동이 이루어질 정확한 장소 및 주소를 입력해주세요."></span>
 	            </label>
 	            
-              <textarea class="input-xxlarge" id="meetingpoint" rows="4" name="meetingpoint"></textarea>
+              <textarea class="input-xxlarge" id="meetingpoint" rows="4" name="meetingpoint"><%=meetingpoint %></textarea>
            </div>
             
             <div class="control-group"> 
@@ -120,11 +150,12 @@
             </label>
             
             <div class="controls">
-              <input type="text" class="input-large" id="price" name="price">
+              <input type="text" class="input-large" id="price" name="price" value="<%=price%>">
             </div>
           </div>
           <input type="hidden" name="mode" value="basic" id="mode"/>
        		<div class="pull-right">
+       		<input type="hidden" value="<%=content_id%>" name="content_id"/>
             <button type="submit" class="btn btn-primary">Next>></button>
             <button type="reset" class="btn">Cancel</button>
          </div>

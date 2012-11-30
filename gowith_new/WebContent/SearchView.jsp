@@ -9,4 +9,5 @@
 </head>
 <jsp:include page="Mainview/top/top.jsp"></jsp:include><br><br>
 <jsp:include page="Mainview/search/main.jsp"></jsp:include>
+<jsp:include page="Mainview/footer/footertable.jsp"></jsp:include>
 </html>

@@ -5,13 +5,9 @@
 <meta charset="UTF-8">
 <title>Welcome to GoWith</title>
 	<%@include file="cssCon.jsp" %>
-	<%@include file="CommonT.jsp" %>
 	
-</head>
-
-<body class="homepage" id="top">
-<jsp:include page="Mainview/top/top.jsp"></jsp:include><br>
-<jsp:include page="Menu/HelpCenter/helpCenter.jsp"></jsp:include>
+</head><body>
+<jsp:include page="Mainview/top/top.jsp"></jsp:include><br><br>
+<jsp:include page="Mainview/search/searchContent.jsp"></jsp:include>
 <jsp:include page="Mainview/footer/footertable.jsp"></jsp:include>
-</body>
-</html>
+</body></html>

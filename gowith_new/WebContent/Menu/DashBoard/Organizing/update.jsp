@@ -6,6 +6,7 @@
 	int SESSION_ID=	Integer.parseInt((String)session.getAttribute("SESSION_USER_ID")); 
 
 	request.setCharacterEncoding("UTF-8");
+	content_id=request.getParameter("content_id");
 	title = request.getParameter("title");
 	description =  request.getParameter("description");
 	category = request.getParameter("category");
@@ -32,7 +33,7 @@
 
 if(mode.equals("basic")){
 					try{
-							query = "INSERT INTO content(user_id, title, description, category, num_people, duration, meetingpoint,meetingtime,price,promote,cratedat) VALUES(?, ?, ?, ?, ?, ?, ?,?,?,?,?) ";
+							query = "UPDATE content SET user_id=?, title=?, description=?, category=?, num_people=?, duration=?, meetingpoint=?,meetingtime=?,price=?,promote=?,cratedat=? WHERE Id=?";
 							Conn=DriverManager.getConnection(url,db_user,db_passwd);
 							pstmt = Conn.prepareStatement(query);
 							pstmt.setInt(1,SESSION_ID);
@@ -46,14 +47,9 @@ if(mode.equals("basic")){
 							pstmt.setString(9,price);
 							pstmt.setInt(10,1);
 							pstmt.setString(11,strToday);
+							pstmt.setString(12,content_id);
 							//out.println(query); //쿼리문 확인
 					  	pstmt.executeUpdate();
-					  	%>
-						<script>
-									location.replace("http://localhost:8080/gowith/Create_Organizing.jsp?next=photo");
-						</script>
-
-				<%
 					}catch(Exception e){
 							
 					}finally {
@@ -62,7 +58,12 @@ if(mode.equals("basic")){
 							if (pstmt != null) try{pstmt.close();} catch(SQLException e) {}
 							if (Conn != null) try{Conn.close();} catch(SQLException e) {}
 					}
+%>
+					<script>
+								location.replace("http://localhost:8080/gowith/Create_Organizing.jsp?next=photo");
+					</script>
 
+<%
 }else{
 	
 	out.println("다른 처린단...."+mode);

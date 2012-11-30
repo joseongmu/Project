@@ -4,6 +4,7 @@
 <%@include file="../../CommonT.jsp" %>
   <%
 	SESSION_USER_ID=	(String)session.getAttribute("SESSION_USER_ID");
+
 	try{
 		Conn = DriverManager.getConnection(url,db_user,db_passwd);
 		pstmt = Conn.prepareStatement("SELECT * From user WHERE Id=?");
@@ -44,7 +45,7 @@
 	<div>
 		<div class="general-form inlineForm">
 			<div class="avatar-box">
-        <form action="Menu/DashBoard/Profile_Update.jsp" class="uniForm profile-form" method="POST">
+        <form action="Menu/DashBoard/Profile_Update.jsp" class="uniForm profile-form" method="POST" enctype="multipart/form-data">
         <div id="avatar-container">
 					<div class="profile-avatar">
 						<img src="Profile_img/<%=profile_img %>" alt="" class="profile_update"  id="PreviewImage"/>

@@ -16,33 +16,35 @@
 		      		<div class="pre-clone"></div>
 	<% 
 try{
-	query = "SELECT user_id,title,category,img1,price FROM content order by cratedat desc";
+	query = "SELECT * FROM content as C,user as U WHERE U.Id=C.user_id and C.promote=2 order by cratedat desc";
 	Conn=DriverManager.getConnection(url,db_user,db_passwd);
 	pstmt = Conn.prepareStatement(query);
 	rs = pstmt.executeQuery();
 	int i=1;
-while(rs.next()) {
+  while(rs.next()) {
         user_id = rs.getString("user_id");
         title = rs.getString("title");    
         category = rs.getString("category");
         img1 = rs.getString("img1");
+        profile_img= rs.getString("profile_img");
         price = rs.getString("price");
+        content_id=rs.getString("C.Id");
        
 %>		
         	<div class="lifted polaroid roid-item real num-<%=i++%>">
           <div class="lifted-content">
-			             	<a href="클릭시 활동 내용이 보는 view">
-			              <img src="image/<%out.println(img1); %>" width="280" height="208" alt="" />
+			             	<a href="<%=SearchContentLink%>?Id=<%=content_id %>">
+			              <img src="image/<%if(img1==null || img1.length()==0){ out.print("no_image.jpg");}else{out.print(img1);}%>" width="280" height="208" alt="view_img" class="view_img"/>
 			             	</a>
 			             	
-			            	<a href="클릭시 활동 내용 올린 사용자를 보는 view">
-			              <img src="image/<%out.println(img1); %>" width="60" height="60" class="avatar-display" />
+			            	<a >
+			              <img src="Profile_img/<%=profile_img%>" width="60" height="60" class="avatar-display" />
 			            	</a>
             	
           <div class="meta">
 		               	<div class="clearfix">
 				                  <h5 class="title">
-				                  <a href="클릭시 활동 내용이 보는 view"><%if(title.length()>24){ out.print(title.substring(0,24)+"...");}else{out.print(title);}%></a>
+				                  <a href="<%=SearchContentLink%>?Id=<%=content_id %>"><%if(title.length()>24){ out.print(title.substring(0,24)+"...");}else{out.print(title);}%></a>
 				                  </h5>
 													<span class="img-favorite">
 													     <span class="favorite-activity-icon"></span>
@@ -52,9 +54,9 @@ while(rs.next()) {
 			             	<div>
 				                  <span class="location-text">
 				                  <span class="location"></span>
-				                  <a><%out.println(category); %></a>
+				                  <a><%=category %></a>
 				                  </span>
-				                  <span class="price"><%out.println(price); %>원</span>
+				                  <span class="price"><%=price%>원</span>
 		                </div>
 		       </div>
 		              <span class="clear"></span>

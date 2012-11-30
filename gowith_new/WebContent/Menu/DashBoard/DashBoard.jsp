@@ -55,7 +55,7 @@
               <jsp:include page="Profile.jsp"></jsp:include>
               </div>
                <div class="<%=tab[5]%>" id="Account">
-              <jsp:include page="Account.jsp"></jsp:include>
+              <jsp:include page="Location.jsp"></jsp:include>
               </div>
               
             </div>

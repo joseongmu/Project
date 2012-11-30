@@ -26,7 +26,7 @@
 										      <div class="nav-collapse">
 										      
 											          <ul class="nav">
-											            <li class="active"><a href="<%=SearchLink%>">Find someting to do</a></li>
+											            <li class="active"><a href="#">Find someting to do</a></li>
 											          </ul>
 											          
 											          <form class="navbar-search pull-left" action="<%=SearchLink%>" method="post">
@@ -35,11 +35,11 @@
 											          
 												          <ul class="nav pull-right">
 														          	<li class="divider-vertical"></li>
-														            <li><a href="<%=SearchLink%>?location="><i class="icon-search icon-white"></i></a></li>
+														            <li><a href="<%=SearchLink%>"><i class="icon-search icon-white"></i></a></li>
 														            
 														             <% if(SESSION_USER_ID==null){%>
 														            <li class="divider-vertical"></li>
-														            <li><a href="<%=HelloLink%>">We are gowith</a></li>
+														            <li><a href="<%=TeamLink%>">We are gowith</a></li>
 														            
 														            <li class="divider-vertical"></li>
 														            <li><a href="<%=SignupLink%>">Sign up</a></li>

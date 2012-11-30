@@ -8,14 +8,14 @@
       <div id="rb"></div>
       <div class="grid_4 alpha omega footer_arrow">
         <span class="wand ready"></span>
-        <h3><a href="/about/#host">Site Map</a></h3>
+        <h3><a href="#">Site Map</a></h3>
       </div>
       <div class="grid_5 alpha omega footer_features">
         <ul>
-          <li><span class="deal"></span>Sign up</li>
-          <li><span class="passion"></span>DashBoard</li>
-          <li><span class="simple"></span><a href="helpCenter.jsp">Help center</a></li>
-          <li><span class="protect"></span>Search</li>
+          <li><span class="deal"></span><a href="<%=TeamLink%>">The team</a></li>
+          <li><span class="passion"></span><a href="<%=DashBoardLink%>">DashBoard</a></li>
+          <li><span class="simple"></span><a href="<%=HelpCenterLink%>">Help center</a></li>
+          <li><span class="protect"></span><a href="<%=SignupLink%>">Sign up</a></li>
         </ul>
       </div>
       <div class="grid_2 alpha">

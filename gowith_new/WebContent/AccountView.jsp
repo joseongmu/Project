@@ -11,7 +11,7 @@
 
 <body class="homepage" id="top">
 <jsp:include page="Mainview/top/top.jsp"></jsp:include><br>
-<jsp:include page="Menu/HelpCenter/helpCenter.jsp"></jsp:include>
+<jsp:include page="Menu/DashBoard/Account.jsp"></jsp:include>
 <jsp:include page="Mainview/footer/footertable.jsp"></jsp:include>
 </body>
 </html>

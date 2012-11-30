@@ -16,31 +16,7 @@
         </p>
       </div>
       <div class="organizer-grid">
-        <ul>
-            <li>
-              <a href="/thedrawingroom/" target="_BLANK" class="popup-avatar">
-                <img src="https://d210sb62pv61zh.cloudfront.net/avatars/thedrawingroom/resized/80/bdr logo.jpg" alt="thedrawingroom" width="80" height="80" class="avatar-display" />
-              </a>
-              <div class="organizer-popup"><div class="popup-text"><p><a href="/thedrawingroom/" target="_BLANK" class="organizer-name"> 조성무</a>
-                  <span class="location-grey"></span> <span class="grey-text">서울</span></p></div></div>
-            </li>
-            
-            <li>
-              <a href="/thedrawingroom/" target="_BLANK" class="popup-avatar">
-                <img src="https://d210sb62pv61zh.cloudfront.net/avatars/thedrawingroom/resized/80/bdr logo.jpg" alt="thedrawingroom" width="80" height="80" class="avatar-display" />
-              </a>
-              <div class="organizer-popup"><div class="popup-text"><p><a href="/thedrawingroom/" target="_BLANK" class="organizer-name"> 이정구</a>
-                  <span class="location-grey"></span> <span class="grey-text">수원</span></p></div></div>
-            </li>
-            
-            <li>
-              <a href="/thedrawingroom/" target="_BLANK" class="popup-avatar">
-                <img src="https://d210sb62pv61zh.cloudfront.net/avatars/thedrawingroom/resized/80/bdr logo.jpg" alt="thedrawingroom" width="80" height="80" class="avatar-display" />
-              </a>
-              <div class="organizer-popup"><div class="popup-text"><p><a href="/thedrawingroom/" target="_BLANK" class="organizer-name"> 강진원</a>
-                  <span class="location-grey"></span> <span class="grey-text">안산</span></p></div></div>
-            </li>
-        </ul>
+					<img src="img/global.png"/>
       </div>
       <div class="clear"></div>
     </div>
@@ -54,7 +30,7 @@
       </h1>
       <div class="grid_4 alpha">
         <h4>
-          <img src="https://d3pvklq8xnxxh2.cloudfront.net/img/organizer_page/organizer_create.c706287.png" />
+          <img src="img/organizer_create.png" />
          	<br/> 무료로 활동을 만드세요
         </h4>
         <ul class="checklist small">
@@ -67,7 +43,7 @@
       </div>
       <div class="grid_4">
         <h4>
-          <img src="https://d3pvklq8xnxxh2.cloudfront.net/img/organizer_page/organizer_global.c706287.png" />
+          <img src="img/organizer_global.png" />
           <br/> 한국의 어디든 갑시다!
         </h4>
         <ul class="checklist small">
@@ -80,7 +56,7 @@
       </div>
       <div class="grid_4 omega">
         <h4>
-          <img src="https://d3pvklq8xnxxh2.cloudfront.net/img/organizer_page/organizer_money.c706287.png" />
+          <img src="img/organizer_money.png" />
           	<br/>예약하고 돈버세요
         </h4>
         <ul class="checklist small">
@@ -100,7 +76,7 @@
       이제 까지와는 전혀다른 경험을 제공할게요!!<br/>
         저희와 함께해요. 당신의 열정이 필요합니다.
       </h1>
-      <a id="get-started-now" href="#" class="gidsy-button green-button top-40px-margin">
+      <a id="get-started-now" href="index.jsp" class="gidsy-button green-button top-40px-margin">
         Get started now
       </a>
     </div>

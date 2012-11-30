@@ -3,7 +3,7 @@
      <%@include file="../../../CommonT.jsp" %>
     <% nextpage = request.getParameter("next"); %>
 		<div class="span3" >
-		     <%if(nextpage==null) {%>
+		     <%if(nextpage==null || nextpage.equals("modi")) {%>
 							<div class="form-horizontal well">
 							<h5>Making-Organizing-Order</h5>
 							</div>
@@ -15,9 +15,6 @@
 							</div>
 							<div class="form-horizontal well">			
 							 <span class="calendar-icon"></span><span class="form_label_text">Calender</span>
-							</div>
-							<div class="form-horizontal well">			
-							 <span class="promote-icon"></span><span class="form_label_text">Promote</span>
 							</div>
 				<%}else if(nextpage.equals("photo")){ %>
 						<div class="form-horizontal well">
@@ -32,9 +29,6 @@
 						<div class="form-horizontal well">			
 						 <span class="calendar-icon"></span><span class="form_label_text">Calender</span>
 						</div>
-						<div class="form-horizontal well">			
-						 <span class="promote-icon"></span><span class="form_label_text">Promote</span>
-						</div>
 			<%}else if(nextpage.equals("calender")){ %>
 						<div class="form-horizontal well">
 						<h5>Making-Organizing-Order</h5>
@@ -47,9 +41,6 @@
 						</div>
 						<div class="form-horizontal-well">			
 						 <span class="calendar-icon"></span><span class="form_label_text">Calender</span>
-						</div>
-						<div class="form-horizontal well">			
-						 <span class="promote-icon"></span><span class="form_label_text">Promote</span>
 						</div>
 				<%} %>
 		</div>
