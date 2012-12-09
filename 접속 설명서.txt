@@ -1,5 +1,5 @@
 접속 URL : http://ec2-54-248-227-249.ap-northeast-1.compute.amazonaws.com:8080/gowith/
 
-관리자 ID : test@naver.com  PW : 111111
+관리자 ID   : test@naver.com  PW : 111111
 사용자1 ID  : test2@naver.com PW : 111111
 사용자2 ID  : test3@naver.com PW : 111111
