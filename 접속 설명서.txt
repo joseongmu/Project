@@ -1,7 +1,8 @@
-Á¢¼Ó ÁÖ¼Ò : http://54.248.227.249:8080/gowith/
+ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½ : hthttp://ec2-54-248-227-249.ap-northeast-1.compute.amazonaws.com:8080/gowith/
 
-°ü¸®ÀÚ °èÁ¤ : test@naver.com / 111111
 
-»ç¿ëÀÚ °èÁ¤ : test2@naver.com / 111111
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : test@naver.com / 111111
 
-»ç¿ëÀÚ °èÁ¤ : test3@naver.com / 111111
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : test2@naver.com / 111111
+
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : test3@naver.com / 111111
